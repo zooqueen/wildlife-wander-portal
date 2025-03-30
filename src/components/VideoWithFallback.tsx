@@ -40,7 +40,7 @@ const VideoWithFallback = ({ youtubeId, fallbackImage, className = "" }: VideoWi
         <img 
           src={fallbackImage} 
           alt="Zoo Connect Globe" 
-          className="w-full"
+          className="w-full object-cover"
         />
       ) : (
         // YouTube iframe with optimizations
@@ -49,11 +49,11 @@ const VideoWithFallback = ({ youtubeId, fallbackImage, className = "" }: VideoWi
             <img 
               src={fallbackImage} 
               alt="Zoo Connect Globe" 
-              className="w-full"
+              className="w-full object-cover"
             />
           </div>
           <iframe 
-            className={`w-full aspect-square ${isLoaded ? 'block' : 'hidden'}`}
+            className={`w-full aspect-square object-cover ${isLoaded ? 'block' : 'hidden'}`}
             src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${youtubeId}&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&color=white&iv_load_policy=3`}
             title="Zoo Connect Globe Animation"
             frameBorder="0"
