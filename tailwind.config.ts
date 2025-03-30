@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -109,6 +108,9 @@ export default {
 			backgroundImage: {
 				'hero-pattern': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1472396961693-142e6e269027")',
 			},
+			fontFamily: {
+				sans: ['Blauer Nue', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif'],
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
