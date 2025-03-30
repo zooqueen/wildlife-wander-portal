@@ -1,4 +1,3 @@
-@import './styles/fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -91,11 +90,4 @@
 .experience-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.15);
-}
-
-/* Grid pattern background */
-.bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
 }
