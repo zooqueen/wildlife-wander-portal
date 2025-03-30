@@ -7,15 +7,22 @@ interface VideoWithFallbackProps {
   className?: string;
 }
 
+// Interface for Navigator with connection property
+interface NavigatorWithConnection extends Navigator {
+  connection?: {
+    downlink: number;
+  };
+}
+
 const VideoWithFallback = ({ youtubeId, fallbackImage, className = "" }: VideoWithFallbackProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [shouldUseImage, setShouldUseImage] = useState(true);
 
   useEffect(() => {
     // Check connection speed to determine if we should load video
+    const navigator = window.navigator as NavigatorWithConnection;
     if (navigator.connection) {
-      const connection = navigator.connection as any;
-      if (connection.downlink >= 1.5) { // If download speed is >= 1.5 Mbps
+      if (navigator.connection.downlink >= 1.5) { // If download speed is >= 1.5 Mbps
         setShouldUseImage(false);
       }
     } else {
@@ -47,11 +54,12 @@ const VideoWithFallback = ({ youtubeId, fallbackImage, className = "" }: VideoWi
           </div>
           <iframe 
             className={`w-full max-w-[600px] mx-auto aspect-square ${isLoaded ? 'block' : 'hidden'}`}
-            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${youtubeId}&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0`}
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${youtubeId}&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&color=white&iv_load_policy=3`}
             title="Zoo Connect Globe Animation"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             onLoad={() => setIsLoaded(true)}
+            style={{ backgroundColor: 'transparent' }}
           ></iframe>
         </>
       )}
