@@ -5,7 +5,7 @@ import AuthForm from "@/components/auth/AuthForm";
 
 const Login = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#33C3F0]">
       <Navbar />
       
       <main className="flex-1 py-12">
