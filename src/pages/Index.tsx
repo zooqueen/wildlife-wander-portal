@@ -1,10 +1,10 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import VideoWithFallback from "@/components/VideoWithFallback";
 
 const Index = () => {
-  return <div className="min-h-screen bg-[#33C3F0] flex flex-col">
+  return (
+    <div className="min-h-screen bg-[#33C3F0] flex flex-col">
       <header className="container mx-auto px-6 py-6 flex items-center justify-between">
         <div className="text-black font-bold text-3xl">ZOO CONNECT</div>
         
@@ -21,10 +21,10 @@ const Index = () => {
       
       <main className="flex-1 container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="w-full md:w-1/2 relative">
-          <VideoWithFallback 
-            youtubeId="4EOpFGpbfBs" 
-            fallbackImage="/lovable-uploads/754c7fa1-184b-49f3-b2bf-cfe1311145b9.png" 
-            className="w-full"
+          <img 
+            src="/lovable-uploads/f4faa93f-ae28-4c52-ad24-55267af6c9fa.png" 
+            alt="Zoo Connect Globe" 
+            className="w-full max-w-[600px] mx-auto"
           />
         </div>
         
@@ -42,7 +42,8 @@ const Index = () => {
           </Link>
         </div>
       </main>
-    </div>;
+    </div>
+  );
 };
 
 export default Index;
