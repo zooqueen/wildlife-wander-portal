@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import VideoWithFallback from "@/components/VideoWithFallback";
 
 const Index = () => {
-  return <div className="min-h-screen bg-[#00A4E4] flex flex-col">
+  return <div className="min-h-screen bg-[#00B9FB] flex flex-col">
       <header className="container mx-auto px-6 py-6 flex items-center justify-between">
         <div className="text-black font-bold text-3xl">ZOO CONNECT</div>
         
