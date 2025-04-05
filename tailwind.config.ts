@@ -63,15 +63,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Brutalist theme colors
-				brutalist: {
-					black: 'var(--brutalist-black)',
-					white: 'var(--brutalist-white)',
-					yellow: 'var(--brutalist-yellow)',
-					green: 'var(--brutalist-green)',
-					blue: 'var(--brutalist-blue)',
-					red: 'var(--brutalist-red)',
-				},
 				// Custom colors for wildlife theme
 				nature: {
 					50: '#f3f9e8',
@@ -117,10 +108,6 @@ export default {
 			},
 			backgroundImage: {
 				'hero-pattern': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1472396961693-142e6e269027")',
-				'grid-pattern': 'linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)',
-			},
-			backgroundSize: {
-				'grid': '20px 20px',
 			},
 		}
 	},
